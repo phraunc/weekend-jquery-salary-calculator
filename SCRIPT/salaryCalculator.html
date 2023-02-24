@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,75 +11,60 @@
     <title>SALARY CALCULATOR</title>
 
 </head>
-<body>
-    <h1>Salary Calculator</H1>
-      <!-- employee first name --->
-      <div>
-        <label for="firstNameInput">
-            FIRST NAME
-        </label>
-        <input id="firstNameInput" type="text" />
-      </div>
-  
-      <!-- last name -->
-      <div>
-        <label for="lastNameInput">
-            LAST NAME
-        </label>
-        <input id="lastNameInput" type="text" />
-      </div>
-  
-      <!-- employee id -->
-      <div>
-        <label for="employeeIdInput" >
-            EMPLOYEE ID
-        </label>
-        <input id="employeeIdInput" type="number" />
-      </div>
 
-        <!-- job title -->
-        <div>
-            <label for="jobTitleInput">
-              JOB TITLE
-            </label>
-            <input id="jobTitleInput" type="text" />
-          </div>
+<body>
+
+    <h1>Salary Calculator</H1>
+
+    <!-- employee first name --->
+    <div>
+<h2>Add Employee</h2>
+        <label for="firstNameInput"></label> <input placeholder="FIRST NAME" id="firstNameInput" type="text" />
+
+        <!-- last name -->
+
+        <label for="lastNameInput"> <input placeholder="LAST NAME" id="lastNameInput" type="text" />
+
+            <!-- employee id -->
+
+            <label for="employeeIdInput"></label> <input placeholder="EMPLOYEE ID" id="employeeIdInput" type="number">
+
+            <!-- job title -->
+
+            <label for="jobTitleInput"></label><input placeholder="JOB TITLE" id="jobTitleInput" type="text" />
 
             <!-- annual salary -->
-      <div>
-        <label for="annualSalaryInput">
-          SALARY
-        </label>
-        <input id="annualSalaryInput" type="number"/>
-      </div>
-        
-<!--    add submit button   / add a red background (css file) when monthly cost exceeds 20,000-->
+            <label for="annualSalaryInput"> </label> <input placeholder="ANNUAL SALARY" id="annualSalaryInput" type="number" />
+    </div>
 
-      <button id="addEmployeebtn" type="submit">Add Employee</button>
+    <!--    add submit button   / add a red background (css file) when monthly cost exceeds 20,000-->
+
+    <button id="addEmployeebtn" type="submit">Submit</button>
     <table id="workPlace">
-      <h2>Information</h2>
-      <tr>
-        <td>Zap</td>
-        <td>Brannegin</td>
-        <td>10923</td>
-        <td>Captain</td>
-        <td>30,000</td>
-       
-       
-       <!---   create a delete button to delete employee -->
+        <h2>Employees</h2>
+        <tr>
+            <td>Zap</td>
+            <td>Brannegin</td>
+            <td>10923</td>
+            <td>Captain</td>
+            <td>30,000</td>
 
-        <td>
-          <button class="removeEmployeeBtn">
-            Delete
-          </button>
-        </td>
-      </tr>
+
+            <!---   create a delete button to delete employee -->
+
+            <td>
+                <button class="removeEmployeeBtn">
+                    Delete
+                </button>
+            </td>
+        </tr>
     </table>
-  </body>
-  
-  </html>
+</body>
 
- <!--
+</html>
+
+
+<!--
 The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
 
 A 'Submit' button should collect the form information, store the information to calculate monthly costs, 
