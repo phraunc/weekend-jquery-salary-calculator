@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/STYLE SHEET/style.css">
+    <script src="jquery.js"></script>
+    <script src="salaryCalculator.js"></script>
+    <title>SALARY CALCULATOR</title>
+
+</head>
+<body>
+    <h1>Salary Calculator</H1>
+      <!-- employee first name --->
+      <div>
+        <label for="firstNameInput">
+            FIRST NAME
+        </label>
+        <input id="firstNameInput" type="text" />
+      </div>
+  
+      <!-- last name -->
+      <div>
+        <label for="lastNameInput">
+            LAST NAME
+        </label>
+        <input id="lastNameInput" type="text" />
+      </div>
+  
+      <!-- employee id -->
+      <div>
+        <label for="employeeIdInput" >
+            EMPLOYEE ID
+        </label>
+        <input id="employeeIdInput" type="number" />
+      </div>
+
+        <!-- job title -->
+        <div>
+            <label for="jobTitleInput">
+              JOB TITLE
+            </label>
+            <input id="jobTitleInput" type="text" />
+          </div>
+
+            <!-- annual salary -->
+      <div>
+        <label for="annualSalaryInput">
+          SALARY
+        </label>
+        <input id="annualSalaryInput" type="number"/>
+      </div>
+        
+<!--    add submit button   / add a red background (css file) when monthly cost exceeds 20,000-->
+
+      <button id="addEmployeebtn" type="submit">Add Employee</button>
+    <table id="workPlace">
+      <h2>Information</h2>
+      <tr>
+        <td>Zap</td>
+        <td>Brannegin</td>
+        <td>10923</td>
+        <td>Captain</td>
+        <td>30,000</td>
+       
+       
+       <!---   create a delete button to delete employee -->
+
+        <td>
+          <button class="removeEmployeeBtn">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </table>
+  </body>
+  
+  </html>
+
+ <!--
+The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
+
+A 'Submit' button should collect the form information, store the information to calculate monthly costs, 
+append information to the DOM and clear the input fields. Using the stored information, 
+calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, 
+add a red background color to the total monthly cost.
+
+Create a delete button that removes an employee from the DOM. For Base mode,
+ it does **not** need to remove that Employee's salary from the reported total.
+
+    -->
