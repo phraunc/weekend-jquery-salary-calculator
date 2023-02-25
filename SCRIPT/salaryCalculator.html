@@ -42,22 +42,30 @@
 
     <button id="addEmployeebtn" type="submit">Submit</button>
 
-
     <h2>Employees</h2>
 
-    <table id="workPlace">
+    <table class="workPlace">
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee ID</th>
-            <th>Job Title</th>
-            <th>Annual Salary</th>
+            <td id="firstNameInput">First Name</td>
+            <td id="lastNameInput">Last Name</td>
+            <td id="employeeIdInput">Employee ID</td>
+            <td id="jobTitleInput">Job Title</td>
+            <td id="annualSalaryInput">Annual Salary</td>
         </tr>
+        </table>
+
+        <ul id="employeeList">
+            <!--     Employees will be placed in here       --->
+        </ul>
         <!---   create a delete button to delete employee -->
-        <tr>
-            <button class="removeEmployeeBtn">Delete</button>
-        </tr>
-    </table>
+        <li>
+            <button id="removeEmployeeBtn">Delete</button>
+        </li>
+    <div>
+        <h3>Monthly Costs</h3>
+        <input placeholder="Monthly Costs" id="monthlyCostInput" type="number">
+    </div>
+    
 </body>
 
 </html>

@@ -6,7 +6,7 @@ function readyNow() {
   console.log("DOM is loaded!");
 
   $('#addEmployeebtn').on('click', addEmployee);
-  $('body').on('click', '.removeEmployeeBtn', removeEmployee);
+  $('body').on('click', '#removeEmployeeBtn', removeEmployee);
 
   //document readynow can now use jquery
   //add submit button
@@ -48,6 +48,7 @@ alert('Your submission is missing inputs');
 
 //render the DOM after newEmployee is added
 render();
+MonthlyTotal();
 }
 }
 
@@ -65,16 +66,10 @@ console.log('In the render function');
 $('#workplace').empty();
 
 //loop over garage array, append each to the employee
-for(person of employee ){
+ for(person of employee ){
 
-    $('#workplace').append(`
-    <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Employee ID</th>
-        <th>Job Title</th>
-        <th>Annual Salary</th>
-    </tr>
+    $('.workplace').append(`
+    <table class="workPlace" style="border: 5px solid black">
   <tr>
     <td>${person.firstName}</td> 
     <td>${person.lastName}</td>
@@ -82,13 +77,21 @@ for(person of employee ){
     <td>${person.jobTitle}</td>
     <td>${person.annualSalary}</td>
   </tr>
+</table>
     <tr>
         <button class="removeEmployeeBtn">Delete</button>
     </tr>
-</table>
 </body>
 
 </html>
-    `);
+    `); 
   }
+}
+
+//Create a function to calculate the total Annual salary of all employees then divide that total by 12 to get the monthly income
+    //Ammend the total into the DOM and display it
+        //Create an if statement and if the monthly total is above 20,000 then make the monthly box turn red
+function MonthlyTotal(){
+    console.log('In the monthlyTotal function');
+
 }
