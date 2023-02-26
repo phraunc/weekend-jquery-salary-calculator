@@ -18,26 +18,36 @@ let employee = []; // empty array to capture all employees plus object literal i
 
 
 function addEmployee(){
-    console.log('in the addEmploee function');
-    console.log('employee before newEmployee is added', employee);
+    console.log('Employee before the new employee added', employee);
+    
+    //console.log('employee before newEmployee is added', employee);
     //should capture employee object
       //Get imnput values for employee
-    const submitFirstName = $('#firstNameInput').val();
-    const submitLastName = $('#lastNameInput').val();
-    const submitIdNumber = $('#employeeIdInput').val();
-    const submitJobTitle = $('#employeeIdInput').val();
-    const submitAnuualSalary = $('#annualSalaryInput').val();
+    const firstNameInput = $('#firstNameInput').val();
+    const lastNameInput = $('#lastNameInput').val();
+    const employeeIdInput = $('#employeeIdInput').val();
+    const jobTitleInput = $('#employeeIdInput').val();
+    const annualSalaryInput = $('#annualSalaryInput').val();
+    //console.log to show that I can see the values of all inputs in array
+    console.log(`
+    Input Values:
+    firstName: ${firstNameInput}
+    lastName: ${lastNameInput}
+    employeeId: ${employeeIdInput}
+    jobTitle: ${jobTitleInput}
+    annualSalary: ${annualSalaryInput}
+    `);
 
 //Capture car values inside an object
     const NewEmployee = {
-        firstName: submitFirstName,
-        lastName: submitLastName,
-        employeeId: submitIdNumber,
-        jobTitle: submitJobTitle,
-        annualSalary: submitAnuualSalary
+        firstName: firstNameInput,
+        lastName: lastNameInput,
+        employeeId: employeeIdInput,
+        jobTitle: jobTitleInput,
+        annualSalary: annualSalaryInput
     };
 
-    if(submitFirstName && submitLastName && submitIdNumber && submitJobTitle && submitAnuualSalary) {
+    if(firstNameInput && lastNameInput && employeeIdInput && jobTitleInput && annualSalaryInput) {
         console.log(true);
         //if truthy, then run function
        employee.push(NewEmployee);
@@ -69,15 +79,14 @@ $('#workplace').empty();
  for(person of employee ){
 
     $('.workplace').append(`
-    <table class="workPlace" style="border: 5px solid black">
-  <tr>
-    <td>${person.firstName}</td> 
-    <td>${person.lastName}</td>
-    <td>${person.employeeId}</td>
-    <td>${person.jobTitle}</td>
-    <td>${person.annualSalary}</td>
-  </tr>
-</table>
+
+    <tr>
+     <td>${person.firstName}</td> 
+      <td>${person.lastName}</td>
+      <td>${person.employeeId}</td>
+      <td>${person.jobTitle}</td>
+      <td>${person.annualSalary}</td>
+    </tr>
     <tr>
         <button class="removeEmployeeBtn">Delete</button>
     </tr>

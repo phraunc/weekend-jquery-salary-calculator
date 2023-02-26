@@ -44,23 +44,29 @@
 
     <h2>Employees</h2>
 
-    <table class="workPlace">
+    <table class="workPlace" border="2"><!--I could not figure this out for the longest time...I needed to put the border in there for it to work
+         otherwise I couldnt see the border in the webpage-->
+<!----         Created table headeer         -->
         <tr>
-            <td id="firstNameInput">First Name</td>
-            <td id="lastNameInput">Last Name</td>
-            <td id="employeeIdInput">Employee ID</td>
-            <td id="jobTitleInput">Job Title</td>
-            <td id="annualSalaryInput">Annual Salary</td>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee ID</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+        </tr>
+
+        <tr>
+            <td id="firstNameInput"></td>
+            <td id="lastNameInput"></td>
+            <td id="employeeIdInput"></td>
+            <td id="jobTitleInput"></td>
+            <td id="annualSalaryInput"></td>
         </tr>
         </table>
-
-        <ul id="employeeList">
-            <!--     Employees will be placed in here       --->
-        </ul>
         <!---   create a delete button to delete employee -->
-        <li>
+        <div>
             <button id="removeEmployeeBtn">Delete</button>
-        </li>
+        </div>
     <div>
         <h3>Monthly Costs</h3>
         <input placeholder="Monthly Costs" id="monthlyCostInput" type="number">
