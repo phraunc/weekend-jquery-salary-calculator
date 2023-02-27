@@ -17,7 +17,7 @@
     <h1>Salary Calculator</H1>
 
     <!-- employee first name --->
-    <div>
+    <div class="addEmployee">
         <h2>Add Employee</h2>
         <label for="firstNameInput"></label> <input placeholder="FIRST NAME" id="firstNameInput" type="text" />
 
@@ -44,32 +44,33 @@
 
     <h2>Employees</h2>
 
-    <table class="workPlace" border="2"><!--I could not figure this out for the longest time...I needed to put the border in there for it to work
+    <table id="workPlace" border="2"><!--I could not figure this out for the longest time...I needed to put the border in there for it to work
          otherwise I couldnt see the border in the webpage-->
 <!----         Created table headeer         -->
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee ID</th>
-            <th>Job Title</th>
-            <th>Annual Salary</th>
+       
+       
+
+        <tr id="employeeinfo">
+                
+                <td>F.Name</td>
+                <td>L.Name</td>
+                <td>Employee ID</td>
+                <td>Job Title</td>
+                <td>Annual Salary</td>
+                <td>
+                    <button class="removeEmployeeBtn">Delete</button>
+                </td>
         </tr>
 
-        <tr>
-            <td id="firstNameInput"></td>
-            <td id="lastNameInput"></td>
-            <td id="employeeIdInput"></td>
-            <td id="jobTitleInput"></td>
-            <td id="annualSalaryInput"></td>
-        </tr>
         </table>
+
+        
+
         <!---   create a delete button to delete employee -->
-        <div>
-            <button id="removeEmployeeBtn">Delete</button>
-        </div>
+        
     <div>
-        <h3>Monthly Costs</h3>
-        <input placeholder="Monthly Costs" id="monthlyCostInput" type="number">
+        <h3>Monthly Costs: <span id="monthlyCostInput"></span></h3>
+       
     </div>
     
 </body>
@@ -90,4 +91,5 @@ Create a delete button that removes an employee from the DOM. For Base mode,
 
     -->
 
-   
+      
+ 
